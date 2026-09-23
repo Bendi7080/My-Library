@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Media Library</title>
+<link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+<div class="app">
+<aside class="side">
+<div class="logo">My <span>Library</span></div>
+<nav class="nav">
+<button data-page="home">🏠 Главная</button>
+<button data-page="folders">📁 Папки</button>
+<button data-page="stats">📊 Статистика</button>
+<button data-page="favorites">⭐ Избранное</button>
+<button data-page="settings">⚙️ Настройки</button>
+</nav>
+<div class="sideBottom"><button class="btn primary" id="add">＋ Добавить</button></div>
+</aside>
+<main class="main" id="main"></main>
+</div>
+<div class="modal" id="modal"><div class="box" id="box"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+  <script>if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});</script>
+</body>
+</html>
